@@ -39,7 +39,7 @@ Node* ptrOf(Link* ll, int idx);
 int front(Link* ll);
 int back(Link* ll);
 // 调
-void reverse(Link* ll);
+int reverse(Link* ll);
 void bubble(Link* ll);
 int Bubble(Link* ll);
 /*-----------------------------------------------*/
@@ -195,7 +195,7 @@ int back(Link* ll)
 	return tail(ll)->value;
 }
 
-int reserve(Link* ll)
+int reverse(Link* ll)
 {
 	if (empty(ll)) return 0;
 	Node* pre = NULL;

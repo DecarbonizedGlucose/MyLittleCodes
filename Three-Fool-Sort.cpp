@@ -11,29 +11,15 @@ void swap(int& a, int& b)
 	b = temp;
 }
 
-void newBubble(int* arr, int len)
+void bubbleSort(int* arr, int len)
 {
-	for (int end = len - 1; end > 0; --end)
+	for (int end = len - 1; end > 0; --end) // 直观的末位有序
 	{
 		for (int i = 0; i < end; ++i)
 		{
 			if (arr[i] > arr[i + 1])
 			{
 				swap(arr[i], arr[i + 1]);
-			}
-		}
-	}
-}
-
-void oldBubble(int* arr, int len)
-{
-	for (int i = 0; i < len; i++)
-	{
-		for (int j = 0; j < len - 1; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				swap(arr[j], arr[j + 1]);
 			}
 		}
 	}
@@ -69,18 +55,5 @@ void insertionsort(int* arr, int len)
 
 int main()
 {
-	for (int i : arr)
-	{
-		cout << i << " ";
-	}
-	cout << endl;
-
-	insertionsort(arr, len);
-
-	for (int i : arr)
-	{
-		cout << i << " ";
-	}
-	cout << endl;
 	return 0;
 }

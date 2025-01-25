@@ -59,7 +59,7 @@ public:
 		Node* pre = _L1.head->next->value <= _L2.head->next->value ? _L1.head->next : _L2.head->next;
 		head->next = pre;
 		Node* cur1 = pre->next;
-		Node* cur2 = pre == _L1.head->next ? _L2.head->next : _L1.head->next;
+		Node* cur2 = _L1.head->next->value <= _L2.head->next->value ? _L2.head->next : _L1.head->next->next;
 
 		while (cur1 != nullptr && cur2 != nullptr)
 		{
